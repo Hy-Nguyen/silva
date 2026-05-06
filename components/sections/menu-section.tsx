@@ -26,7 +26,10 @@ export function MenuSection({ data, variant, filled, menuItemsPictures }: MenuSe
 	const cats = data.menu.categories;
 
 	return (
-		<section style={{ padding: "clamp(72px, 8vw, 120px) clamp(24px, 5vw, 64px)", maxWidth: 1280, margin: "0 auto" }}>
+		<section
+			id='menu'
+			style={{ padding: "clamp(72px, 8vw, 120px) clamp(24px, 5vw, 64px)", maxWidth: 1280, margin: "0 auto" }}
+		>
 			<motion.div
 				variants={reduced ? undefined : stagger()}
 				initial='hidden'
@@ -58,7 +61,13 @@ export function MenuSection({ data, variant, filled, menuItemsPictures }: MenuSe
 			{variant === "tabs" ? (
 				<TabsMenu cats={cats} tab={tab} setTab={setTab} filled={filled} menuItemsPictures={menuItemsPictures} />
 			) : (
-				<AccordionMenu cats={cats} open={openAcc} setOpen={setOpenAcc} filled={filled} menuItemsPictures={menuItemsPictures} />
+				<AccordionMenu
+					cats={cats}
+					open={openAcc}
+					setOpen={setOpenAcc}
+					filled={filled}
+					menuItemsPictures={menuItemsPictures}
+				/>
 			)}
 		</section>
 	);
@@ -210,7 +219,13 @@ function AccordionMenu({
 									}}
 								>
 									{c.items.map((item, j) => (
-										<MenuItem key={j} item={item} index={j} filled={filled} menuItemsPictures={menuItemsPictures} />
+										<MenuItem
+											key={j}
+											item={item}
+											index={j}
+											filled={filled}
+											menuItemsPictures={menuItemsPictures}
+										/>
 									))}
 								</div>
 							</motion.div>

@@ -46,8 +46,8 @@ export const CLIENT_CONFIG: {
 			eyebrow: "Fresh Seafood Daily",
 			headline: "Bold. Fresh. Straight From the Sea.",
 			sub: "Coastal Mexican mariscos crafted daily with the freshest ingredients. Find us around Phoenix and taste what the ocean tastes like.",
-			cta: "Order Now",
-			ctaIcon: "ShoppingBag",
+			cta: "See the Menu",
+			ctaIcon: "Menu",
 		},
 
 		about: {

@@ -8,7 +8,7 @@ import { Logo } from "@/components/ui/primitives";
 import { getIcon } from "@/lib/icons";
 import type { Archetype, LogoKind } from "@/config/design.config";
 
-const LINKS = ["About", "Services", "Gallery", "Hours", "Contact"];
+const LINKS = ["About", "Services", "Menu", "Gallery", "Hours", "Contact"];
 
 interface NavProps {
 	data: Archetype;
@@ -128,7 +128,16 @@ export function Nav({ data, logoKind }: NavProps) {
 								<a
 									key={l}
 									href={`#${l.toLowerCase()}`}
-									onClick={() => setOpen(false)}
+									onClick={(e) => {
+										e.preventDefault();
+										setOpen(false);
+
+										setTimeout(() => {
+											document.querySelector(`#${l.toLowerCase()}`)?.scrollIntoView({
+												behavior: "smooth",
+											});
+										}, 150); // match your sheet/drawer close animation duration
+									}}
 									style={{
 										padding: "14px 4px",
 										fontFamily: "var(--f-body)",
@@ -150,9 +159,9 @@ export function Nav({ data, logoKind }: NavProps) {
 								<Button variant='primary' size='md' full icon={Phone} href={`tel:${data.contact.phone}`}>
 									{data.contact.phone}
 								</Button>
-								<Button variant='secondary' size='md' full icon={Calendar}>
+								{/* <Button variant='secondary' size='md' full icon={Calendar}>
 									Book online
-								</Button>
+								</Button> */}
 							</div>
 						</div>
 					</motion.div>
