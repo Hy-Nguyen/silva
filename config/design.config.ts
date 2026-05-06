@@ -57,6 +57,7 @@ export interface Archetype {
 	name: string;
 	tagline: string;
 	logoMark: string;
+	logoImageUrl?: string;
 	hero: {
 		eyebrow: string;
 		headline: string;
