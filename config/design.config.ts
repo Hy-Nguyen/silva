@@ -34,6 +34,7 @@ export interface ServiceItem {
 	title: string;
 	desc: string;
 	price: string;
+	images?: string[];
 }
 
 export interface MenuItem {

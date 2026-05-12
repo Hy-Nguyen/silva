@@ -15,6 +15,36 @@ body {
 	margin: 0;
 }
 
+/* Services row — stacked on mobile, side-by-side on desktop */
+.service-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 4vw, 32px);
+}
+
+.service-text {
+    order: 2;
+}
+
+.service-media {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .service-row {
+        grid-template-columns: 2fr 3fr;
+        align-items: start;
+    }
+
+    .service-text {
+        order: 1;
+    }
+
+    .service-media {
+        order: 2;
+    }
+}
+
 /* Gallery grid — 2 cols on mobile, 3 on desktop */
 .gallery-grid {
 	grid-template-columns: repeat(2, 1fr) !important;

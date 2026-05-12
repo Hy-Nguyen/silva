@@ -241,18 +241,16 @@ export function Hero({ data, filled }: HeroProps) {
                     position: 'relative',
                     zIndex: 1,
                     maxWidth: 1280,
-                    minHeight: 640,
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'flex-end',
                     y: reduced ? 0 : fgY,
                 }}
-                className="group w-full pr-10 lg:w-2/5"
+                className="group w-full px-4 lg:min-h-160 lg:w-2/5 lg:pr-10"
             >
                 <Image
                     src={MenuImage}
                     alt="Mariscos Silva Hero"
-                    className="lg:min-w-500px z-1 mr-16 w-full rounded-md transition-transform duration-200 will-change-transform md:group-hover:scale-105"
+                    className="z-1 mr-16 w-full rounded-md pt-16 transition-transform duration-200 will-change-transform md:group-hover:scale-105 lg:min-w-[500px] lg:pt-0"
                 />
             </motion.div>
         </section>

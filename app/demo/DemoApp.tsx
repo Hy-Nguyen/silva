@@ -23,7 +23,7 @@ function Site() {
 			<main>
 				<Hero data={data} filled={config.filledImagery} />
 				<About data={data} filled={config.filledImagery} />
-				<Services data={data} />
+				<Services data={data} filled={config.filledImagery} />
 				{data.menu && (
 					<MenuSection
 						data={data}
