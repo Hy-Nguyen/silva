@@ -271,7 +271,7 @@ export const CLIENT_CONFIG: {
         },
 
         images: {
-            hero: 'https://scontent-phx1-1.cdninstagram.com/v/t51.82787-15/542294066_17918007468159220_6852400315291571176_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzcxNjYwMTg4ODkyNzU3NjA0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IlNUT1JZLnhwaWRzLjEyOTAuc2RyLnJlZ3VsYXJfcGhvdG8uQzMifQ%3D%3D&_nc_ohc=0s6WHMlFg7sQ7kNvwE1cSBQ&_nc_oc=AdqGIQdcxJ_IL5R6qWqLWEl64Qwr_2tRbJjk7jQ3RSN7gWEYfFRivaLrUuRA2oPnUZE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_gid=PLgyxSlpgFfK4MaGdV-GDA&_nc_ss=7a22e&oh=00_Af4TAHrp202ZYrofblBuiT3V3xl0C40PK3VZUlYVvTmIMQ&oe=6A0184F1', // 1600px wide — full-bleed background
+            hero: 'hero/mariscos-silva-hero.jpg', // 1600px wide — full-bleed background
             about: 'https://images.unsplash.com/photo-1624300629298-e9de39c13be5', // portrait orientation, ~900px wide
             gallery: [
                 'seafood-cocktail-cup.webp',
