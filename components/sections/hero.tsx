@@ -7,7 +7,8 @@ import { getIcon } from "@/lib/icons";
 import { heroContainer, heroLine, bgImageReveal } from "@/lib/motion";
 import type { Archetype } from "@/config/design.config";
 import { MapIcon } from "lucide-react";
-
+import Image from "next/image";
+import MenuImage from "@/public/hero/mariscos-menu.jpg";
 interface HeroProps {
 	data: Archetype;
 	filled: boolean;
@@ -37,8 +38,8 @@ export function Hero({ data, filled }: HeroProps) {
 				position: "relative",
 				overflow: "hidden",
 				background: "var(--c-bg)",
-				minHeight: 640,
 			}}
+			className='flex flex-col min-h-dvh lg:flex-row md:gap-2 items-center justify-center'
 		>
 			{/* Background layer with parallax */}
 			<motion.div
@@ -114,20 +115,20 @@ export function Hero({ data, filled }: HeroProps) {
 					zIndex: 1,
 					maxWidth: 1280,
 					margin: "0 auto",
-					padding: "120px 64px 140px",
+					// padding: "120px 64px 140px",
 					minHeight: 640,
 					display: "flex",
 					flexDirection: "column",
 					justifyContent: "flex-end",
 					y: reduced ? 0 : fgY,
 				}}
-				className='hero-content'
+				className='hero-content lg:max-w-5xl'
 			>
 				<motion.div
 					variants={reduced ? undefined : heroContainer}
 					initial='hidden'
 					animate='show'
-					style={{ maxWidth: 640 }}
+					className='md:w-2/3'
 				>
 					{/* Eyebrow */}
 					<motion.div
@@ -190,7 +191,7 @@ export function Hero({ data, filled }: HeroProps) {
 						variants={reduced ? undefined : heroLine}
 						style={{ display: "flex", gap: 10, flexWrap: "wrap" }}
 					>
-						<a href='#menu'>
+						<a href='#gallery'>
 							<Button variant='primary' size='lg' icon={HeroIcon}>
 								{data.hero.cta}
 							</Button>
@@ -207,6 +208,29 @@ export function Hero({ data, filled }: HeroProps) {
 						</a>
 					</motion.div>
 				</motion.div>
+			</motion.div>
+			<motion.div
+				variants={reduced ? undefined : heroContainer}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 1.2, duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+				style={{
+					position: "relative",
+					zIndex: 1,
+					maxWidth: 1280,
+					minHeight: 640,
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "flex-end",
+					y: reduced ? 0 : fgY,
+				}}
+				className='w-full group lg:w-2/5 pr-10'
+			>
+				<Image
+					src={MenuImage}
+					alt='Mariscos Silva Hero'
+					className='z-1 mr-16 lg:min-w-500px md:group-hover:scale-105 transition-transform will-change-transform duration-200 w-full rounded-md'
+				/>
 			</motion.div>
 		</section>
 	);

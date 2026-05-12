@@ -13,6 +13,7 @@
 // └─────────────────────────────────────────────────────────────────────────────┘
 
 import type { Archetype, ArchetypeKey, ClientSiteConfig } from "@/config/design.config";
+import Logo from "@/public/assets/logo.jpg";
 
 export const CLIENT_CONFIG: {
 	meta: { isDemoMode: boolean };
@@ -39,15 +40,14 @@ export const CLIENT_CONFIG: {
 		name: "Mariscos Silva",
 		tagline: "Fresh Daily · Phoenix, AZ",
 		logoMark: "Shrimp", // any Lucide icon name — browse at lucide.dev/icons
-		logoImageUrl:
-			"https://scontent-phx1-1.cdninstagram.com/v/t51.82787-19/657595279_17942701569159220_2504081701899808913_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDI2LmMyIn0&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gGYqrFo3D1oR9uCs2nUrOHPxCwM8v_LRMRStxG63eGYWI_b5vkRAXO8BUVCgOCO7ps&_nc_ohc=RoJcGfyxKncQ7kNvwHL1jKt&_nc_gid=rUSis3nE1-MDPkb_o1r5fQ&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af5MjlhmpYZglx-7XJvnAri589xLqG7h0CZW7PjDZprDqA&oe=6A017C95&_nc_sid=7a9f4b",
+		logoImageUrl: Logo, // optional — if logoKind is "image", this URL will be used for the logo instead of an icon
 
 		hero: {
 			eyebrow: "Fresh Seafood Daily",
-			headline: "Bold. Fresh. Straight From the Sea.",
+			headline: "Todo Fresco, Jugoso, Bien Servido!",
 			sub: "Coastal Mexican mariscos crafted daily with the freshest ingredients. Find us around Phoenix and taste what the ocean tastes like.",
-			cta: "See the Menu",
-			ctaIcon: "Menu",
+			cta: "See our Clamatos",
+			ctaIcon: "Shrimp",
 		},
 
 		about: {
@@ -85,12 +85,27 @@ export const CLIENT_CONFIG: {
 		],
 
 		galleryCaptions: [
-			"YOUR_CAPTION_1",
-			"YOUR_CAPTION_2",
-			"YOUR_CAPTION_3",
-			"YOUR_CAPTION_4",
-			"YOUR_CAPTION_5",
-			"YOUR_CAPTION_6",
+			"Seafood cocktail cup loaded with avocado and cilantro",
+			"Three micheladas garnished with shrimp, veggies, and chips",
+			"Micheladas loaded with shrimp, cucumber, and lemon",
+			"Fresh seafood cocktail cups ready to serve",
+			"Fresh shrimp ceviche topped with sliced avocado and cucumber",
+			"Campechana cup with shrimp, cucumber, lemon, and celery",
+			// "Party tray shrimp ceviche with avocado and red onion",
+			"Shrimp aguachile with avocado, red onion, and cucumber",
+			"Crispy fish tacos with chipotle sauce, pico de gallo, and rice",
+			"Octopus aguachile with avocado, red onion, and cucumber",
+			"Party tray shrimp ceviche with avocado and fresh orange",
+			"Shrimp quesadillas sizzling on the griddle",
+			"Shrimp quesadillas plate served with aguachile and rice",
+			"Octopus aguachile with avocado and orange slices",
+			"Mixed seafood cocktail with octopus, shrimp, and fish",
+			"Shrimp pesto pasta with broccoli and garlic toast",
+			"Octopus ceviche with avocado and fresh orange",
+			// "Mixed seafood party tray with avocado and green sauce",
+			// "Party tray shrimp ceviche with fanned avocado and lime",
+			"Shrimp michelada served at the window",
+			// "Mixed seafood party tray with shrimp, octopus, and avocado",
 		],
 
 		testimonials: [
@@ -100,8 +115,9 @@ export const CLIENT_CONFIG: {
 		],
 
 		hours: [
-			["Monday - Thursday", "Closed"],
-			["Friday - Sunday", "12 PM - 6 PM"],
+			["Monday - Tuesday", "Closed"],
+			["Wednesday - Thursday", "2 PM - 7 PM"],
+			["Friday - Sunday", "12 PM - 7 PM"],
 		],
 
 		contact: {
@@ -227,12 +243,27 @@ export const CLIENT_CONFIG: {
 			hero: "https://scontent-phx1-1.cdninstagram.com/v/t51.82787-15/542294066_17918007468159220_6852400315291571176_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzcxNjYwMTg4ODkyNzU3NjA0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IlNUT1JZLnhwaWRzLjEyOTAuc2RyLnJlZ3VsYXJfcGhvdG8uQzMifQ%3D%3D&_nc_ohc=0s6WHMlFg7sQ7kNvwE1cSBQ&_nc_oc=AdqGIQdcxJ_IL5R6qWqLWEl64Qwr_2tRbJjk7jQ3RSN7gWEYfFRivaLrUuRA2oPnUZE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-phx1-1.cdninstagram.com&_nc_gid=PLgyxSlpgFfK4MaGdV-GDA&_nc_ss=7a22e&oh=00_Af4TAHrp202ZYrofblBuiT3V3xl0C40PK3VZUlYVvTmIMQ&oe=6A0184F1", // 1600px wide — full-bleed background
 			about: "https://images.unsplash.com/photo-1624300629298-e9de39c13be5", // portrait orientation, ~900px wide
 			gallery: [
-				"YOUR_GALLERY_1_URL", // 600px — rendered at aspect 4/5
-				"YOUR_GALLERY_2_URL", // 600px — rendered at aspect 1/1
-				"YOUR_GALLERY_3_URL", // 600px — rendered at aspect 1/1
-				"YOUR_GALLERY_4_URL", // 600px — rendered at aspect 1/1
-				"YOUR_GALLERY_5_URL", // 600px — rendered at aspect 4/5
-				"YOUR_GALLERY_6_URL", // 600px — rendered at aspect 1/1
+				"seafood-cocktail-cup.jpeg",
+				"micheladas-tray.jpeg",
+				"micheladas-closeup.jpeg",
+				"cocktail-cups-kitchen.jpeg",
+				"campechana.jpeg",
+				"shrimp-ceviche-1.jpeg",
+				// "shrimp-ceviche-tray-1.jpeg",
+				"shrimp-aguachile-1.jpeg",
+				"fish-tacos.jpeg",
+				"octopus-aguachile-1.jpeg",
+				"shrimp-ceviche-tray-2.jpeg",
+				"shrimp-quesadillas-griddle.jpeg",
+				"shrimp-quesadillas-plate.jpeg",
+				"octopus-aguachile-2.jpeg",
+				"mixed-seafood-cocktail.jpeg",
+				"shrimp-pasta.jpeg",
+				"octopus-ceviche.jpeg",
+				// "mixed-seafood-tray-1.jpeg",
+				// "shrimp-ceviche-tray-3.jpeg",
+				"michelada-food-truck.jpeg",
+				// "mixed-seafood-tray-2.jpeg",
 			],
 			testimonialAvatar: "YOUR_AVATAR_URL", // 200×200px square
 		},

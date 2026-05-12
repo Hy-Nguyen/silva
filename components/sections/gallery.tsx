@@ -86,8 +86,8 @@ export function Gallery({ data, filled }: GalleryProps) {
 							index={i}
 							caption={cap}
 							filled={filled}
-							src={data.images.gallery[i]}
-							ratio={i === 0 || i === 4 ? "4/5" : "1/1"}
+							src={`./gallery/${data.images.gallery[i]}`}
+							ratio={"1/1"}
 							onClick={() => filled && setLightbox(i)}
 							reduced={!!reduced}
 						/>
@@ -122,12 +122,11 @@ export function Gallery({ data, filled }: GalleryProps) {
 							animate={{ opacity: 1, scale: 1 }}
 							exit={{ opacity: 0, scale: 0.96 }}
 							transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-							src={data.images.gallery[lightbox]}
+							src={`./gallery/${data.images.gallery[lightbox]}`}
 							alt={data.galleryCaptions[lightbox]}
 							onClick={(e) => e.stopPropagation()}
 							style={{ maxWidth: "100%", maxHeight: "82vh", borderRadius: 12, objectFit: "contain" }}
 						/>
-
 						{/* Caption */}
 						<div
 							style={{
@@ -143,7 +142,6 @@ export function Gallery({ data, filled }: GalleryProps) {
 						>
 							{data.galleryCaptions[lightbox]} · click outside to close
 						</div>
-
 						{/* Nav arrows */}
 						<button
 							onClick={(e) => {
@@ -193,7 +191,6 @@ export function Gallery({ data, filled }: GalleryProps) {
 						>
 							<ChevronRight size={22} strokeWidth={2} />
 						</button>
-
 						{/* Close */}
 						<button
 							onClick={() => setLightbox(null)}

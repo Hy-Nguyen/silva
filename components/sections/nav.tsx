@@ -43,8 +43,9 @@ export function Nav({ data, logoKind }: NavProps) {
 				top: 0,
 				zIndex: 30,
 				background: scrolled
-					? "color-mix(in srgb, var(--c-bg) 92%, transparent)"
-					: "color-mix(in srgb, var(--c-bg) 80%, transparent)",
+					? "color-mix(in srgb, var(--c-surface-2) 92%, transparent)"
+					: "color-mix(in srgb, var(--c-surface-2) 80%, transparent)",
+
 				backdropFilter: "blur(16px) saturate(150%)",
 				WebkitBackdropFilter: "blur(16px) saturate(150%)",
 				borderBottom: `1px solid ${scrolled ? "var(--c-border)" : "transparent"}`,
@@ -74,9 +75,15 @@ export function Nav({ data, logoKind }: NavProps) {
 					<Button variant='secondary' size='sm' icon={Phone} href={`tel:${data.contact.phone}`}>
 						{data.contact.phone}
 					</Button>
-					<Button variant='primary' size='sm'>
-						Book now
-					</Button>
+					<a
+						href='https://www.google.com/maps/dir/?api=1&destination=2732+W+Glendale+Ave,+Phoenix,+AZ+85051'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<Button variant='primary' size='sm'>
+							Find us here!
+						</Button>
+					</a>
 				</nav>
 
 				{/* Mobile row */}

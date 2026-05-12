@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 export type ArchetypeKey = "salon" | "plumber" | "taco";
 export type PaletteKey = "stone" | "ink" | "sage" | "fire" | "ocean" | "rose";
@@ -57,7 +59,7 @@ export interface Archetype {
 	name: string;
 	tagline: string;
 	logoMark: string;
-	logoImageUrl?: string;
+	logoImageUrl?: string | StaticImageData;
 	hero: {
 		eyebrow: string;
 		headline: string;

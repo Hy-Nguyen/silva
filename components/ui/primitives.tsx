@@ -185,7 +185,13 @@ export function Logo({ kind = "icon", name, mark: Mark, size = 22, style }: Logo
 		return (
 			<div style={{ display: "flex", alignItems: "center", gap: 10, ...style }}>
 				{CLIENT_CONFIG.data.logoImageUrl ? (
-					<Image src={CLIENT_CONFIG.data.logoImageUrl} alt={name} width={size + 18} height={size + 6} />
+					<Image
+						src={CLIENT_CONFIG.data.logoImageUrl}
+						alt={name}
+						width={size + 18}
+						height={size + 6}
+						className='rounded-full'
+					/>
 				) : (
 					<div
 						style={{

@@ -37,17 +37,17 @@ export default function Page() {
 			<Nav data={data} logoKind={site.logoKind} />
 			<main>
 				<Hero data={data} filled={site.filledImagery} />
-				<About data={data} filled={site.filledImagery} />
+				<Gallery data={data} filled={site.filledImagery} />
 				<Services data={data} />
-				{data.menu && (
+				{/* {data.menu && (
 					<MenuSection
 						data={data}
 						variant={site.menuVariant}
 						filled={site.filledImagery}
 						menuItemsPictures={site.menuItemsPictures}
 					/>
-				)}
-				<Gallery data={data} filled={site.filledImagery} />
+				)} */}
+				<About data={data} filled={site.filledImagery} />
 				<Testimonials data={data} filled={site.filledImagery} />
 				<HoursContact data={data} />
 			</main>
